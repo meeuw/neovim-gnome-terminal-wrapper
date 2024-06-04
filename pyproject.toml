@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "nvim-wrapper"
+version = "0.1.0"
+description = "Wrapper for running neovim in a separate instance of gnome-terminal"
+authors = ["Felipe Morales <hel.sheep@gmail.com>"]
+license = "GPL-3.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+dbus-python = "^1.3.2"
+
+[tool.poetry.scripts]
+nvim-wrapper = 'nvim_wrapper:main'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

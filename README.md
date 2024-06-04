@@ -19,7 +19,7 @@ On Arch, install `neovim-gnome-terminal-wrapper` from the AUR.
 Manually:
 
 ~~~
-cp nvim-wrapper /usr/bin/nvim-wrapper
+pipx install nvim-wrapper
 cp neovim.desktop /usr/share/applications/neovim.desktop
 cp neovim.svg /usr/share/icons/neovim.svg
 ~~~
