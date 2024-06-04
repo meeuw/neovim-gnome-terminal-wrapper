@@ -25,12 +25,6 @@ def find_terminal_server():
         sys.exit()
 
 
-def get_nvim_path():
-    try:
-        return os.environ['NVIM_PATH']
-    except:
-        return 'nvim'
-
 SERVER_CMD = [
     find_terminal_server(),
     '--app-id', APP_ID,
@@ -44,7 +38,7 @@ TERM_CMD = [
     '--name', NAME,
     '--hide-menubar',
     '-x',
-    get_nvim_path(),
+    os.environ.get('NVIM_PATH', 'nvim'),
 ]
 GTERM_PASSTHROUGH_OPTIONS = [
     '--full-screen',
